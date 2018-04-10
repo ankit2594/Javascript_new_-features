@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function Employee() {
+            this.salary = 20000;
+            setTimeout(function () {
+                console.log(this.salary)  //udefined
+            }, 2000)
+
+        }
+
+        //OR
+        function Employee() {
+            this.salary = 20000;
+            var self = this;
+            setTimeout(function () {
+                console.log(self.salary)  //20000
+            }, 2000)
+
+        }
+
+        //OR
+        function Employee() {
+            this.salary = 20000;
+            setTimeout(() => {
+                console.log(this.salary)   //20000
+            }, 2000)
+
+        }
+
+        var e = new Employee();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

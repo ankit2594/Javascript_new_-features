@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        //Three ways to create object
+
+        //!. Using Object
+        var person = new Object();
+        person.name = "Ankit",
+            person.age = 23;
+        console.log(person);
+
+
+        //2. Literal synatx
+        var person = {
+            name: "Ankit",
+            age: 23,
+            company: function () {
+                return "Mindtree"
+            }
+        }
+        //convert javascript object to json
+        var jsonObj = JSON.stringify(person);
+        console.log(jsonObj);
+
+        //convert JSon to javascript object
+        console.log(JSON.parse(jsonObj))
+
+
+        //3. constructor syntax
+        function car(theName, theSpeed) {
+            this.name = theName || "i20";
+            this.speed = theSpeed || 200;
+            this.accelerate = function () {
+                console.log("VVVRRRROOOOMMM");
+            }
+        }
+        var carObj = new car("i30", 300);
+
+        //prototypical! (inheritance)
+        function jamesBondCar() {
+            this.canFly = true;
+            this.accelerate = function () {
+                console.log("jjjaaaammmmesssss");
+            }
+        }
+        jamesBondCar.prototype = new car();
+        var jbc = new jamesBondCar();
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+        class Car {
+            constructor(id = 0, name = "i10", speed = 200) {
+                this.id = id,
+                    this.name = name,
+                    this.speed = speed
+            }
+            accelerate() {
+                return this.name + "is running at" + this.speed + "km/hr"
+            }
+        }
+        var c = new Car();
+        console.log(c.accelerate)
+
+        class JamesBondCar extends Car {
+            constructor(id, name, speed, fly) {
+                super(id, name, speed);
+                this.canFly = fly;
+
+            }
+        }
+        var jbc = new JamesBondCar("007", "Houston", 500, true);
+
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var month = "April"
+        let x = 200;
+        var y = 300;
+        console.log(window.x);
+        console.log(window.y);
+
+        //Enhanced object literal syntax
+
+        var name = "Ankit";
+        var city = "Bhopal";
+        var person = {
+            name: name,
+            city: city
+        }
+        //OR we can write like
+
+        var person = { name, city, runs: 2000 };
+
+        var cars = ["BMW", "Audi", "Benz"];
+
+        cars.forEach(function (thecar, index) {
+            console.log(thecar + "is at index" + index)
+        })
+
+        for (let c of cars) {
+            console.log(c)
+        }
+        for (let c in cars) {
+            console.log(c)
+        }
+        //Destructuring with arrays
+        let x, y, z;
+        [x, , y] = cars;    //o/p:- BMW, Benz
+        [x, , y, z = "Tata"] = cars;
+
+        //Destructuring with Object
+        var name, city;
+        var company = { name: "Mindtree", city: "Bangalore" }
+            ({ name, city } = company)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
